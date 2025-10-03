@@ -77,6 +77,57 @@
     box-shadow: 0 12px 24px rgba(0,0,0,0.25);
 }
 
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* space between cards */
+}
+
+.team-member {
+  flex: 1 1 calc(20% - 20px); /* 5 members per row in big screen */
+  max-width: 200px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+/*  Mobile */
+@media (max-width: 600px) {
+  .team-member {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Tablet  */
+@media (min-width: 601px) and (max-width: 900px) {
+  .team-member {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/*  Medium screens  */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .team-member {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+/*  Large screens  */
+@media (min-width: 1201px) {
+  .team-member {
+    flex: 1 1 calc(20% - 20px);
+  }
+}
+
 
 
 </style>
