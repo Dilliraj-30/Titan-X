@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - TitanX</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+       body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+     .navbar-custom {
+    background-color: rgb(34, 40, 49) !important; 
+     }
+    .hero {
+      margin-top: 20px;
+      color:black;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold solid black;
+
+    }
+    .service-img {
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .rates-table {
+      margin-top: 40px;
+    }
+
+    footer{
+      width: 103%;
+      padding: 0;
+      margin-top: 30px;
+      margin-bottom:0;
+    }
+     .container {
+            max-width: 1200px;
+            width: 100%;
+           
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 500px;
+        }
+        
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .carousel-caption h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-caption p {
+            font-size: 1rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 20px;
+        }
+        
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.1);
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: #3498db;
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 768px) {
+            .carousel {
+                height: 400px;
+            }
+            
+            .carousel-caption h3 {
+                font-size: 1.5rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .carousel {
+                height: 300px;
+            }
+            
+            .carousel-caption h3 {
+                font-size: 1.2rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 0.8rem;
+                max-width: 95%;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+
+        .service-img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                cursor: pointer;
+       }
+
+       .service-img:hover {
+               transform: scale(1.08); 
+               box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); 
+      }
+  </style>
+</head>
+<!-- <body>
+  <!-- Navigation bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shipping-fast me-2"></i>
+                 <img style="width: 200px;" src="../asserts/logo/titanlogo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                
+                      <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                
+                      <li class="nav-item">
+                        <a class="nav-link" href="modern-login-signin-form.html">Login/Sign up</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+   <div style="margin-right: 92%; margin-top: 70px; " class="btn btn-dark">
+ <a  style="text-decoration: none; color: white;" href="index.html">go back</a>
+</div>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Shipping Services</h1>
+      <p class="lead">Affordable and reliable ground transportation for all your logistics needs.</p>
+    </div>
+  </section> 
+
+  <!-- carousal section -->
+
+<div class="container my-5">
+  <h1>Our Services</h1>
+  <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../asserts/service_img/service1.png" class="d-block w-100" alt="Service 1">
+        <div class="carousel-caption">
+          <h3>Professional Consultation</h3>
+          <p>Get expert advice tailored to your specific needs and goals.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../asserts/service_img/service2.png" class="d-block w-100" alt="Service 2">
+        <div class="carousel-caption">
+          <h3>Custom Solutions</h3>
+          <p>We create personalized strategies to address your unique challenges.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../asserts/service_img/service3.png" class="d-block w-100" alt="Service 3">
+        <div class="carousel-caption">
+          <h3>Implementation Support</h3>
+          <p>Our team ensures seamless integration and deployment of solutions.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../asserts/service_img/service4.png" class="d-block w-100" alt="Service 4">
+        <div class="carousel-caption">
+          <h3>Ongoing Maintenance</h3>
+          <p>We provide continuous support to keep your systems running smoothly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+
+  <!-- Rates Section -->
+  <section class="container rates-table">
+    <h2 class="text-center mb-4">Shipment Rates (Per Weight)</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered text-left" style="width: 900px; margin-left: 150px;">
+        <thead class="table-dark">
+          <tr>
+            <th>Weight Range</th>
+            <th>Rate (₹)</th>
+            <th>Packing Types</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0 - 5 kg</td>
+            <td>-</td>
+            <td>Envelope / Small Box (courier & documents)</td>
+          </tr>
+          <tr>
+            <td>6 - 15 kg</td>
+            <td>-</td>
+            <td>Medium Carton (clothes, small electronics)</td>
+          </tr>
+          <tr>
+            <td>16 - 30 kg</td>
+            <td>-</td>
+            <td>Large Carton (bulk items)</td>
+          </tr>
+          <tr>
+            <td>31 - 50 kg</td>
+            <td>-</td>
+            <td>Heavy-Duty Box / Crate (fragile/heavy goods)</td>
+          </tr>
+          <tr>
+            <td>50+ kg</td>
+            <td>-</td>
+            <td>Custom Pallet / Wooden Crate (industrial shipments)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Images Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Our Ground Fleet</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="../asserts/truck/img1.png" class="service-img" alt="Ground Shipping Truck">
+      </div>
+      <div class="col-md-4">
+        <img src="../asserts/truck/img2.png" class="service-img" alt="Logistics Vehicle">
+      </div>
+      <div class="col-md-4">
+        <img src="../asserts/truck/img5.png" class="service-img" alt="Cargo Loading">
+      </div>
+    </div>
+  </section> 
+
+  <!-- CTA Section -->
+  <section class="bg-dark text-light text-center p-5">
+    <h2>Need a Custom Quote?</h2>
+    <p>Contact our team for large shipments or bulk transport services.</p>
+    <a href="contact.html" class="btn btn-light btn-lg mt-3">Contact Us</a>
+  </section>
+
+<footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 TitanX Logistics. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end social-icons">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const items = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            let currentIndex = 0;
+            const totalItems = items.length;
+            
+            // Function to update carousel position
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active indicator
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Next button event
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            });
+            
+            // Previous button event
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                updateCarousel();
+            });
+            
+            // Indicator click events
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+            
+            // Auto-advance carousel every 5 seconds
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            }, 5000);
+        });
+    </script>
+
+</html>
+
+
+     
+       
+ 

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .earth-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.earth {
+  width: 100%;
+  border-radius: 17%;
+  display: block;
+}
+
+.zigzag-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #00aaff;
+  border-radius: 50%;
+}
+
+/* Zigzag Animations */
+@keyframes zigzag-top {
+  0%   { transform: translate(-50%, -50%) translateX(-120px) translateY(-120px); }
+  25%  { transform: translate(-50%, -50%) translateX(0px)    translateY(-160px); }
+  50%  { transform: translate(-50%, -50%) translateX(120px)  translateY(-120px); }
+  75%  { transform: translate(-50%, -50%) translateX(0px)    translateY(-80px); }
+  100% { transform: translate(-50%, -50%) translateX(-120px) translateY(-120px); }
+}
+
+@keyframes zigzag-right {
+  0%   { transform: translate(-50%, -50%) translateX(120px) translateY(-120px); }
+  25%  { transform: translate(-50%, -50%) translateX(160px) translateY(0px); }
+  50%  { transform: translate(-50%, -50%) translateX(120px) translateY(120px); }
+  75%  { transform: translate(-50%, -50%) translateX(80px)  translateY(0px); }
+  100% { transform: translate(-50%, -50%) translateX(120px) translateY(-120px); }
+}
+
+@keyframes zigzag-bottom {
+  0%   { transform: translate(-50%, -50%) translateX(120px)  translateY(120px); }
+  25%  { transform: translate(-50%, -50%) translateX(0px)    translateY(160px); }
+  50%  { transform: translate(-50%, -50%) translateX(-120px) translateY(120px); }
+  75%  { transform: translate(-50%, -50%) translateX(0px)    translateY(80px); }
+  100% { transform: translate(-50%, -50%) translateX(120px)  translateY(120px); }
+}
+
+@keyframes zigzag-left {
+  0%   { transform: translate(-50%, -50%) translateX(-120px) translateY(120px); }
+  25%  { transform: translate(-50%, -50%) translateX(-160px) translateY(0px); }
+  50%  { transform: translate(-50%, -50%) translateX(-120px) translateY(-120px); }
+  75%  { transform: translate(-50%, -50%) translateX(-80px)  translateY(0px); }
+  100% { transform: translate(-50%, -50%) translateX(-120px) translateY(120px); }
+}
+
+/* Assign animations */
+.zig1 { animation: zigzag-top 5s linear infinite; }
+.zig2 { animation: zigzag-right 6s linear infinite; }
+.zig3 { animation: zigzag-bottom 7s linear infinite; }
+.zig4 { animation: zigzag-left 8s linear infinite; }
+
+
+
+.truck-slogan {
+  font-family: 'Bebas Neue', sans-serif; /* change font here */
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background: #222; /* dark bg for contrast */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.truck-slogan span {
+  color: #ffcc00; /* highlight "Beyond" */
+}
+
+
+
+</style>
+<body>
+<div class="earth-container">
+  <img src="../asserts/logo/Picsart_25-10-01_14-29-51-733.png" alt="Earth" class="earth">
+
+  <!-- Multiple zigzag dots -->
+  <div class="zigzag-dot zig1"></div>
+  <div class="zigzag-dot zig2"></div>
+  <div class="zigzag-dot zig3"></div>
+  <div class="zigzag-dot zig4"></div>
+</div>
+
+
+<div class="truck-slogan">
+  <h2>Strength <span>Beyond</span> Borders</h2>
+</div>
+
+</body>
+</html>

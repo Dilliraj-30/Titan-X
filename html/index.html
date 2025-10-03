@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanX- Fast & Reliable Shipping</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=El+Messiri:wght@400..700&family=Michroma&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
+    <style>
+       #earth-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  
+}
+
+.earth {
+  width: 100%;
+  border-radius: 17%;
+  display: block;
+  z-index: 3;
+}
+
+.zigzag-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #00aaff;
+  border-radius: 50%;
+ 
+}
+
+/* Zigzag Animations */
+@keyframes zigzag-top {
+  0%   { transform: translate(-50%, -50%) translateX(-120px) translateY(-120px); }
+  25%  { transform: translate(-50%, -50%) translateX(0px)    translateY(-160px); }
+  50%  { transform: translate(-50%, -50%) translateX(120px)  translateY(-120px); }
+  75%  { transform: translate(-50%, -50%) translateX(0px)    translateY(-80px); }
+  100% { transform: translate(-50%, -50%) translateX(-120px) translateY(-120px); }
+}
+
+@keyframes zigzag-right {
+  0%   { transform: translate(-50%, -50%) translateX(120px) translateY(-120px); }
+  25%  { transform: translate(-50%, -50%) translateX(160px) translateY(0px); }
+  50%  { transform: translate(-50%, -50%) translateX(120px) translateY(120px); }
+  75%  { transform: translate(-50%, -50%) translateX(80px)  translateY(0px); }
+  100% { transform: translate(-50%, -50%) translateX(120px) translateY(-120px); }
+}
+
+@keyframes zigzag-bottom {
+  0%   { transform: translate(-50%, -50%) translateX(120px)  translateY(120px); }
+  25%  { transform: translate(-50%, -50%) translateX(0px)    translateY(160px); }
+  50%  { transform: translate(-50%, -50%) translateX(-120px) translateY(120px); }
+  75%  { transform: translate(-50%, -50%) translateX(0px)    translateY(80px); }
+  100% { transform: translate(-50%, -50%) translateX(120px)  translateY(120px); }
+}
+
+@keyframes zigzag-left {
+  0%   { transform: translate(-50%, -50%) translateX(-120px) translateY(120px); }
+  25%  { transform: translate(-50%, -50%) translateX(-160px) translateY(0px); }
+  50%  { transform: translate(-50%, -50%) translateX(-120px) translateY(-120px); }
+  75%  { transform: translate(-50%, -50%) translateX(-80px)  translateY(0px); }
+  100% { transform: translate(-50%, -50%) translateX(-120px) translateY(120px); }
+}
+
+/* Assign animations */
+.zig1 { animation: zigzag-top 5s linear infinite; z-index: -1;}
+.zig2 { animation: zigzag-right 6s linear infinite; z-index: -2;}
+.zig3 { animation: zigzag-bottom 7s linear infinite; z-index: -3;}
+.zig4 { animation: zigzag-left 8s linear infinite; z-index: -4;}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shipping-fast me-2"></i>
+                <img style="width: 200px;" src="../asserts/logo/titanlogo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                
+                      <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                
+                      <li class="nav-item">
+                        <a class="nav-link" href="modern-login-signin-form.html">Login/Sign up</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInLeft">Fast & Reliable Logistics Solutions</h1>
+                        <p class="lead text-white my-4 animate__animated animate__fadeInLeft animate__delay-1s"></p>
+                        <div  class="animate__animated animate__fadeInUp animate__delay-2s">
+                          <p style="font-family: 'Michroma', sans-serif; color:white; font-size: 40px;" >STRENGTH BEYOND BORDERS</p>
+                        </div>
+                    </div>
+                   <div id="earth-container" class="lead text-white my-4 animate__animated animate__fadeInRight animate__delay-1s">
+                         <img src="../asserts/logo/Picsart_25-10-01_14-29-51-733.png" alt="Earth" class="earth">
+
+                             <!-- Multiple zigzag dots -->
+                            <div class="zigzag-dot zig1"></div>
+                            <div class="zigzag-dot zig2"></div>
+                            <div class="zigzag-dot zig3"></div>
+                            <div class="zigzag-dot zig4"></div>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="text-muted">Comprehensive logistics solutions for all your shipping needs</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card service-card h-100 animate__animated animate__fadeInUp">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-motorcycle fa-3x"></i>
+                                </div>
+                                <h4 class="card-title">Domestic Delivey</h4>
+                                <p class="card-text">Fast and efficient domestic shipping solutions for time-sensitive deliveries across the globe.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card service-card h-100 animate__animated animate__fadeInUp animate__delay-1s">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-compass fa-3x"></i>
+                                </div>
+                                <h4 class="card-title">Regional Shipping</h4>
+                                <p class="card-text">Cost-effective Regional shipping for large volume cargo with comprehensive tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card service-card h-100 animate__animated animate__fadeInUp animate__delay-2s">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-truck fa-3x"></i>
+                                </div>
+                                <h4 class="card-title">Ground Shipping</h4>
+                                <p class="card-text">Reliable road transport services with real-time tracking and flexible delivery options.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="stat-item animate__animated animate__zoomIn">
+                            <h2 class="display-4 fw-bold">1000+ </h2>
+                            <p class="text-muted">Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item animate__animated animate__zoomIn animate__delay-1s">
+                            <h2 class="display-4 fw-bold">1M+</h2>
+                            <p class="text-muted">Packages Delivered</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item animate__animated animate__zoomIn animate__delay-2s">
+                            <h2 class="display-4 fw-bold">99%</h2>
+                            <p class="text-muted">On-Time Delivery</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item animate__animated animate__zoomIn animate__delay-3s">
+                            <h2 class="display-4 fw-bold">24/7</h2>
+                            <p class="text-muted">Customer Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 text-white">
+            <div class="container text-center">
+                <h2 class="mb-4" style="color: black;">Ready to Ship With Us?</h2>
+                <p class="lead mb-4" style="color: black;">Join thousands of satisfied customers who trust us with their logistics needs.</p>
+                <a href="modern-login-signin-form.html" class="btn btn-light btn-lg">Get Started Today</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 TitanX Logistics. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end social-icons">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.service-card, .stat-item');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if(elementPosition < screenPosition) {
+                        element.classList.add('animate__animated');
+                        
+                        if(element.classList.contains('service-card')) {
+                            element.classList.add('animate__fadeInUp');
+                        } else if(element.classList.contains('stat-item')) {
+                            element.classList.add('animate__zoomIn');
+                        }
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); 
+        });
+    </script>
+</body>
+</html>
