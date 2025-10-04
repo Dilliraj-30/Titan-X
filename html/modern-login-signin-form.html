@@ -325,7 +325,8 @@
               <div class="form-element form-stack">
                 <label for="password-login" class="form-label">Password</label>
                 <input id="password-login" type="password" name="password"><br>
-                <a style="text-decoration: none;" href="froget.html">Forget Password ?</a>
+                <a style="text-decoration: none;" href="froget.html">Forget Password ? </a>  <span style="color: black;">Don't have an account  <span  style="color: red;">SignUp</span></span>
+              
               </div>
               <div class="form-element form-submit">
                 <button id="logIn" class="login" type="submit" name="login">Log In</button>
@@ -475,7 +476,7 @@
       * ====================== */
       view.onFrame = function paperOnFrame(event) {
         if (event.count % 4 === 0) {
-          // Slows down frame rate
+        
           for (var i = 0; i < shapeGroup.children.length; i++) {
             if (i % 2 === 0) {
               shapeGroup.children[i].rotate(-0.1);
